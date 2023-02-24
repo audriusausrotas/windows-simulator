@@ -1,0 +1,258 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.taskbar {
+  display: flex;
+  border: 1px solid black;
+  height: 50px;
+}
+
+.body {
+  flex: 1;
+  padding: 50px;
+  display: flex;
+  gap: 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.img {
+  width: 80px;
+  height: 80px;
+}
+
+.images,
+.audio,
+.video {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+}
+
+.images {
+  top: 50px;
+  left: 50px;
+}
+.audio {
+  top: 50px;
+  left: 200px;
+}
+.video {
+  top: 50px;
+  left: 350px;
+}
+.start {
+  width: 60px;
+  background-image: url("https://e7.pngegg.com/pngimages/532/642/png-clipart-blue-microsoft-windows-logo-windows-8-1-microsoft-windows-computer-software-system-windows-icon-blue-angle-thumbnail.png");
+  background-position: center;
+  background-size: contain;
+  border: none;
+  border-right: 1px solid black;
+}
+
+.folder_top:hover {
+  cursor: move !important;
+}
+
+.start:hover,
+.images:hover,
+.video:hover,
+.audio:hover {
+  cursor: pointer;
+}
+
+.programs {
+  flex: 1;
+}
+
+.time {
+  height: 100%;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 1px solid black;
+  padding-left: 12px;
+}
+
+.startMenu {
+  width: 250px;
+  height: 500px;
+  position: absolute;
+  bottom: 50px;
+  border: 1px solid black;
+  border-bottom: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgba(240, 248, 255, 0.719);
+}
+
+.hide {
+  display: none !important;
+}
+
+.images_s,
+.video_s,
+.audio_s,
+.shutdown {
+  font-size: 20px;
+  border-bottom: 1px solid black;
+  padding: 10px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.images_s:hover,
+.video_s:hover,
+.audio_s:hover,
+.shutdown:hover {
+  cursor: pointer;
+  background-color: rgb(226, 226, 226);
+}
+.shutdown {
+  border-top: 1px solid black;
+  border-bottom: none;
+}
+
+.folder_body,
+.folder_title {
+  pointer-events: none;
+}
+video,
+audio {
+  pointer-events: all;
+}
+
+.images_folder,
+.video_folder,
+.audio_folder {
+  width: 800px;
+  height: 500px;
+  border: 1px solid black;
+  position: absolute;
+  left: 1000px;
+  top: 400px;
+  background-color: rgba(240, 248, 255, 0.918);
+  /* resize: both;
+  overflow: auto; */
+}
+
+.folder_top {
+  display: flex;
+  border-bottom: 1px solid black;
+  padding-left: 20px;
+  align-items: center;
+  font-size: 20px;
+  justify-content: space-between;
+}
+
+.folder_close,
+.video_close,
+.audio_close {
+  background-color: rgb(212, 77, 77);
+  color: white;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.folder_close:hover,
+.video_close:hover,
+.audio_close:hover {
+  background-color: rgb(223, 22, 22);
+  cursor: pointer;
+}
+
+.folder_body,
+.image_body {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 30px;
+}
+
+.bg {
+  width: 150px;
+  height: 100px;
+  border: 1px solid black;
+}
+.bg:hover {
+  cursor: pointer;
+}
+
+.title {
+  background-color: rgba(240, 248, 255, 0.719);
+  padding: 5px 10px;
+}
+
+.audio_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid black;
+  padding: 10px;
+  font-size: 20px;
+  gap: 10px;
+}
+
+.shutdown_item {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aaa {
+  font-size: 50px;
+  color: white;
+  margin: 50px;
+}
+
+.spinner {
+  width: 200px;
+  height: 200px;
+  border-top: 10px solid rgb(224, 62, 62);
+  border-radius: 50%;
+  animation: spin 1s infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.border-gray-500 {
+  border: 1px solid gray;
+}
